@@ -6,4 +6,9 @@ env:
   - NODE_ENV="production";SESSION_SECRET="la li"
 services:
   - mongodb
-script: gulp travis
+  addons:
+    sonarqube:
+      token:
+        secure: 6a5db52c396c5a9f11a64a920f14b1613f3a3553 #Token
+script:
+  - sonar-scanner
