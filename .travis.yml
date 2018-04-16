@@ -12,3 +12,6 @@ services:
         secure: 6a5db52c396c5a9f11a64a920f14b1613f3a3553 #Token
 script:
   - sonar-scanner
+before_script:
+  - npm install -g gulp-cli
+script: gulp
